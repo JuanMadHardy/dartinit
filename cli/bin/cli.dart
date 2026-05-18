@@ -1,5 +1,13 @@
-import 'package:cli/cli.dart' as cli;
+// ignore_for_file: unused_import
 
-void main(List<String> arguments) {
-  print('Hello world: ${cli.calculate()}!');
+import 'dart:io';
+
+import 'package:command_runner/command_runner.dart';
+import 'package:http/http.dart' as http;
+
+const version = '0.0.1';
+
+void main(List<String> arguments) async {
+  var runner = CommandRunner();
+  await runner.run(arguments);
 }
