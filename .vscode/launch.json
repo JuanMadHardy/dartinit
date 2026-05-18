@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "cli",
+            "cwd": "cli",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "help"
+            ]
+        },
+        {
+            "name": "cli (args)",
+            "cwd": "cli",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "${input:cliArgs}"
+            ]
+        },
+        {
+            "name": "command_runner",
+            "cwd": "command_runner",
+            "request": "launch",
+            "type": "dart"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "cliArgs",
+            "type": "promptString",
+            "description": "Argumentos para cli.dart (ej: help)",
+            "default": "help"
+        }
+    ]
+}
