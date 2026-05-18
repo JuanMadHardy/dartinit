@@ -7,10 +7,14 @@ import 'arguments.dart';
 import 'exceptions.dart';
 
 class CommandRunner {
+  CommandRunner({this.onError});
+
   final Map<String, Command> _commands = <String, Command>{};
 
   UnmodifiableSetView<Command> get commands =>
       UnmodifiableSetView<Command>(<Command>{..._commands.values});
+
+  FutureOr<void> Function(Object)? onError;
 
   Future<void> run(List<String> input) async {
     final ArgResults results = parse(input);
