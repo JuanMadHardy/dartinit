@@ -9,7 +9,7 @@ class HelpCommand extends Command {
     addFlag(
       'verbose',
       abbr: 'v',
-      help: 'When true, this command will pirnt each command and its options.',
+      help: 'When true, this command will print each command and its options.',
     );
     addOption(
       'command',
