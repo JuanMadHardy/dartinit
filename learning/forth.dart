@@ -7,9 +7,10 @@ class Forth {
   void evaluate(String input) {
     final tokens = _tokenize(input);
     int i = 0;
+    final tok = tokens.iterator;
 
-    while (i < tokens.length) {
-      final token = tokens[i].toUpperCase();
+    while (tok.moveNext()) {
+      final token = tok.current.toUpperCase();
 
       if (token == ':') {
         i = _defineWord(tokens, i);
