@@ -9,6 +9,7 @@
             "cwd": "cli",
             "request": "launch",
             "type": "dart",
+            "program": "bin/cli.dart",
             "args": [
                 "help"
             ]
@@ -18,6 +19,7 @@
             "cwd": "cli",
             "request": "launch",
             "type": "dart",
+            "program": "bin/cli.dart",
             "args": [
                 "${input:cliArgs}"
             ]
@@ -26,7 +28,20 @@
             "name": "command_runner",
             "cwd": "command_runner",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "program": "example/command_runner_example.dart"
+        },
+        {
+            "name": "learning (current file)",
+            "request": "launch",
+            "type": "dart",
+            "program": "${file}"
+        },
+        {
+            "name": "learning (forth)",
+            "request": "launch",
+            "type": "dart",
+            "program": "learning/forth.dart"
         }
     ],
     "inputs": [
